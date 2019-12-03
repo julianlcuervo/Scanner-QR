@@ -4,12 +4,13 @@ $(document).ready(function () {
 
 //var aux;
 //var cont = 0;
+/*
 var paginas = [];
 paginas[0] = 'pagina1'
 paginas[1] = 'pagina2'
 paginas[2] = 'pagina3'
 paginas[3] = 'pagina4'
-paginas[4] = 'pagina5'
+paginas[4] = 'pagina5'*/
 
 //window.open('http://www.google.com');
 //cordova.InAppBrowser.open('http://www.google.com', '_blank', 'location=yes');
@@ -118,26 +119,12 @@ function openURL(url) {
 
 function addURL(url) {
 	if (typeof (Storage) !== "undefined") {
-		// Store
-		/*var number;
-		if(localStorage.getItem("count") == null){
-			number=0;
-			localStorage.setItem("count", number);
-			localStorage.setItem(paginas[localStorage.getItem("count")], url);
-		}else{
-			aux = 1 + localStorage.getItem("count");
-			console.log(aux)
-			localStorage.removeItem("count");
-			localStorage.setItem("count", aux);
-			localStorage.setItem(paginas[localStorage.getItem("count")], url);
-		}*/
-
-		if(localStorage.clickcount===undefined){
+		localStorage.setItem(url, url);
+		/*if(localStorage.clickcount===undefined){
 			localStorage.clickcount=0;
 		}
 
 		alert(localStorage.clickcount)
-		//localStorage.setItem(paginas[localStorage.clickcount], url);
 		localStorage.setItem(localStorage.clickcount, url);
 
 		if (localStorage.clickcount) {
@@ -145,11 +132,9 @@ function addURL(url) {
 		  } else {
 			localStorage.clickcount = 1;
 		  }
-		//cont += 1;
-		//document.write(localStorage.getItem(url));
-		//localStorage.clear();
 	} else {
 		document.getElementById(url).innerHTML = "Sorry, your browser does not support Web Storage...";
+	}*/
 	}
 }
 
